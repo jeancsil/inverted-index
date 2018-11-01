@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = 'com.jeancsil.App'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "com.mashape.unirest:unirest-java:1.4.9"
+}
+
+jar {
+    baseName = 'inverted-index'
+    version =  '0.1.0'
+}
+
